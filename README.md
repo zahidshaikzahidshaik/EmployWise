@@ -1,46 +1,87 @@
-# Getting Started with Create React App
+# EmployWise User Management Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This React-based application integrates with the Reqres API for user management, providing authentication, user listing, editing, and deletion capabilities.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **Authentication**: Secure login using JWT tokens
+- **User Management**: View, edit, and delete users
+- **Responsive UI**: Modern interface built with Material UI
+- **Client-side Search**: Filter users by name or email
+- **Pagination**: Browse users with pagination support
 
-### `npm start`
+## Technologies Used
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- React with TypeScript
+- React Router for navigation
+- Axios for API requests
+- Material UI for the user interface
+- Local Storage for token persistence
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Getting Started
 
-### `npm test`
+### Prerequisites
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Node.js (version 14 or later recommended)
+- npm or yarn package manager
 
-### `npm run build`
+### Installation
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Clone the repository:
+   ```
+   git clone https://github.com/yourusername/employwise.git
+   cd employwise
+   ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2. Install dependencies:
+   ```
+   npm install
+   ```
+   
+3. Start the development server:
+   ```
+   npm start
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+4. The application will open in your browser at `http://localhost:3000`
 
-### `npm run eject`
+## Usage
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Login
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Use the following credentials to log in:
+  - Email: `eve.holt@reqres.in`
+  - Password: `cityslicka`
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### User Management
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- View the list of users after login
+- Use the search box to filter users
+- Click on the edit icon to modify user information
+- Click on the delete icon to remove a user
+- Navigate between pages using the pagination controls
 
-## Learn More
+## API Integration
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+This application uses the Reqres API for demonstration purposes:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Login: `POST https://reqres.in/api/login`
+- Get Users: `GET https://reqres.in/api/users?page=1`
+- Edit User: `PUT https://reqres.in/api/users/{id}`
+- Delete User: `DELETE https://reqres.in/api/users/{id}`
+
+## Project Structure
+
+```
+src/
+├── components/       # Reusable UI components
+├── pages/            # Main application pages
+├── services/         # API and other services
+├── utils/            # Utility functions
+├── App.tsx           # Main application component
+└── index.tsx         # Application entry point
+```
+
+## License
+
+This project is licensed under the MIT License.
